@@ -1,229 +1,311 @@
-<!DOCTYPE html>
-
 <html>
-
 <head>
-    <title>Biodata</title>
-    
+    <title>Profile</title>
     <style>
-        body{
-            background-color:azure; 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10;
+            background-color: #000305;
+            color: #ffffff;
         }
-
-        table{
+        .navbar {
+            overflow: hidden;
+            background-color: #000305;
             width: 100%;
         }
-
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .content {
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content img {
+            width: 50%;
+            height: 80%;
+            margin-right: 20px;
+        }
+        .content .text {
+            width: 50%;
+        }
+        .typewriter {
+            display: flex;
+            flex-direction: column;
+            max-height: 8.7cm;
+            overflow: hidden;
+        }
+        .typewriter h1 {
+            font-family: monospace;
+            font-size: 1cm;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 1px solid;
+            animation: typing 6s steps(60) forwards, blink 1s step-end infinite;
+        }
         
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+        section {
+            padding: 0px 20px;
+        }
+        .about-heading {
+            font-size: 1.5cm;
+            text-align: center;
+        }
+        .box {
+            background-color: #ffffffe0;
+            color: #000000;
+            padding: 20px;
+            margin: 20px 35px;
+            border-radius: 10px;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                scale: 0.5;
+            }
+            to {
+                opacity: 1;
+                scale: 1;
+            }
+        }
+
+        .block {
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
     </style>
 </head>
 
 <body>
-    <table >
-        <tr>
-            <td width = "75%" >
-                <img src ="lockheed-martin-logo.png" alt = "Logo" width="350" height="70"> 
-            </td>
-            <td width = "25%">
-                <p>
-                    <font face = "Times">
-                        <font size ="6">Oracle Panjaitan</font>
-                        <br>
-                        oracletiop@students.ub.ac.id
-                        <br>
-                        0812967729104
-                        <br>
-                        Jl. Sigura - Gura V, Sumbersari, Kec. Lowokwaru, Kota Malang, Jawa Timur 65145
-                    </font>
-                </p>
-            </td>
-        </tr>
-    </table>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">AboutMe</a>
+        <a href="#information">Information</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <section id="home">
+        <div class="content">
+            <img src="image.JPG" alt="Profile Photo">
+            <div class="text typewriter">
+                <h1>Hey There</h1>
+                <h1>Oracle Tio Panjaitan</h1>
+                <h1>Information System Student</h1>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <section id="about" class="box block">
+        <h1 class="about-heading">About Me</h1>
+            <table class="box" width = "95%">
+                <td valign="top">
+                    <h2>Here have some information about me :)</h2>
+                    <table class="box" cellpadding="15">
+                        <td >
+                            <tr>
+                                <td><i>Nama</i></td>
+                                <td>: Oracle Tio Panjaitan</td>
+                                <td rowspan="8"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3970851414915!2d112.6092175!3d-7.957852099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78827b60de0c25%3A0xefc08f0c45ba5200!2sJl.%20Sigura%20-%20Gura%2C%20Kota%20Malang%2C%20Jawa%20Timur!5e0!3m2!1sen!2sid!4v1740999720070!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td>
+                            </tr>
+                            <tr>
+                                <td><i>NIM</i></td>
+                                <td>: 245150400111069</td>
+                            </tr>
+                            <tr>
+                                <td><i>Universitas</i></td>
+                                <td>: Brawijaya</td>
+                            </tr>
+                            <tr>
+                                <td><i>Fakultas</i></td>
+                                <td>: Ilmu Komputer</td>
+                            </tr>
+                            <tr>
+                                <td><i>Program Studi</i></td>
+                                <td>: Sistem Informasi</td>
+                            </tr>
+                            <tr>
+                                <td><i>Tempat/Tanggal lahir</i></td>
+                                <td>: Bukittinggi, 08 Agustus 2005</td>
+                            </tr>
+                            <tr>
+                                <td><i>Pekerjaan</i></td>
+                                <td>: Mahasiswa</td>
+                            </tr>
+                            <tr>
+                                <td><i>Alamat</i></td>
+                                <td>: <a href="https://maps.app.goo.gl/XBzW6jgWqycE5foU9">Jl. Sigura - Gura V, Sumbersari, Kec. Lowokwaru, Kota Malang, Jawa Timur 65145</a></td>
+                            </tr>
+                        </td>
+                    </table>
+                </td>               
+            </table>
+    </section>
+
     
-    <hr size="10" color="gray">
-    
-    <table >
-        <tr>
-            <td width = "40%" align="center">
-                <h2>Me At School</h2>
-                <hr size = "4" color="black" width="50%">
-                <img src="image.jpg" alt="Photo of me" width="420" height="580">
-                <hr size = "4" color="black" width="50%">
-            </td>
-            <td valign="top" width = "54%">
-                <h1>Biodata</h1>
-                <h2>Here have some information about me :)</h2>
-                <table>
-                    <tr>
-                        <td><i>Nama</i></td>
-                        <td>: Oracle Tio Panjaitan</td>
-                    </tr>
-                    <tr>
-                        <td><i>NIM</i></td>
-                        <td>: 245150400111069</td>
-                    </tr>
-                    <tr>
-                        <td><i>Universitas</i></td>
-                        <td>: Brawijaya</td>
-                    </tr>
-                    <tr>
-                        <td><i>Fakultas</i></td>
-                        <td>: Ilmu Komputer</td>
-                    </tr>
-                    <tr>
-                        <td><i>Program Studi</i></td>
-                        <td>: Sistem Informasi</td>
-                    </tr>
-                    <tr>
-                        <td><i>Tempat/Tanggal lahir</i></td>
-                        <td>: Bukittinggi, 08 Agustus 2005</td>
-                    </tr>
-                    <tr>
-                        <td><i>Pekerjaan</i></td>
-                        <td>: Mahasiswa</td>
-                    </tr>
-                    <tr>
-                        <td><i>Alamat</i></td>
-                        <td>: <a href="https://maps.app.goo.gl/XBzW6jgWqycE5foU9">Jl. Sigura - Gura V, Sumbersari, Kec. Lowokwaru, Kota Malang, Jawa Timur 65145</a></td>
-                    </tr>
-                </table>
-                <h2>Excerpt from the life of a stupid man - Ryunosuke Akutagawa</h2>
-                <p align="justify">
-                    That is true, Your Honor. I am the one who found the body. I went out as
-                    usual this morning to cut cedar in the hills behind my place. The body was
-                    in a bamboo grove on the other side of the mountain. Its exact location? A
-                    few hundred yards off the Yamashina post road. A deserted place where a
-                    few scrub cedar trees are mixed in with the bamboo.
-                    The man was lying on his back in his pale blue robe with the sleeves tied
-                    up and one of those fancy Kyoto-style black hats with the sharp creases. He
-                    had only one stab wound, but it was right in the middle of his chest; the
-                    bamboo leaves around the body were soaked with dark red blood. No, the
-                    bleeding had stopped. The wound looked dry, and I remember it had a big
-                    horsefly sucking on it so hard the thing didn't even notice my footsteps.
-                    Did I see a sword or anything? No, Sir, not a thing. Just a length of rope
-                    by the cedar tree next to the body. And oh yes, there was a comb there,
-                    too. Just the rope and the comb is all. But the weeds and the bamboo leaves
-                    on the ground were pretty trampled down: he must have put up a
-                    tremendous fight before they killed him. How's that, Sir - a horse? No, a
-                    horse could never have gotten into that place. It's all bamboo thicket
-                    between there and the road.
-                    THE TESTIMONY OF A TRAVELING PRIEST UNDER QUESTIONING BY THE
-                    MAGISTRATE 
-                    I'm sure I passed the man yesterday, Your Honor. Yesterday at about
-                    noon, I'd say. Near Checkpoint Hill on the way to Yamashina. He was
-                    walking toward the checkpoint with a woman on horseback. She wore a
-                    stiff, round straw hat with a long veil hanging down around the brim; I
-                    couldn't see her face, just her robe. I think it had a kind of dark-red outer
-                    layer with a blue-green lining. The horse was a dappled gray with a tinge of
-                    red, and I'm fairly sure it had a clipped mane. Was it a big horse? I'd say it
-                    was a few inches taller than most, but I'm a priest after all. I don't know
-                    much about horses. The man? No, Sir, he had a good-sized sword, and he
-                    was equipped with a bow and arrows. I can still see that black-lacquered
-                    quiver of his: he must have had twenty arrows in it, maybe more. I would
-                    never have dreamt that a thing like this could happen to such a man.
-                    <br> 
-                    <b>Ah, what is the life of a human being - a drop of dew, a flash of lightning? This
-                    is so sad, so sad. What can I say?
-                    </b>
-                </p>
-            </td>
-            <td width = "6%"></td>
-        </tr>
-        <br>
-    </table>
+    <section id="information" class="box block">
+        <h2 class="about-heading">Information</h2>
+        <table class="box" width="95%" cellpadding="15">
+            <td><h1><b>Education</b></h1></td>
+            <tr>
+                <th>Institution</th>
+                <th>Degree</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>Brawijaya University</td>
+                <td>Bachelor of Information Systems</td>
+                <td>2024 - Present</td>
+            </tr>
+            <tr>
+                <td>SMAN 2 Bukittinggi</td>
+                <td>High School Diploma</td>
+                <td>2019 - 2023</td>
+            </tr>
+        </table>
+        <table class="box" width="95%" cellpadding="15"> 
+            <td><h1><b>Experience</b></h1></td>
 
-    <br>
-    <br>
-    <br>
-    <br>
+            <tr>
+                <th>Organization</th>
+                <th>Role</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>Del Cyber Security Club</td>
+                <td>Intern</td>
+                <td>2023 - 2024</td>
+            </tr>
+            <tr>
+                <td>KBMDSI</td>
+                <td>Staff Ahli</td>
+                <td>2024 - Present</td>
+            </tr>
+        </table>
+        <table class="box" width="95%" cellpadding="15"> 
+            <td><h1><b>Skills</b></h1></td>
+            <tr>
+                <th>Skill</th>
+                <th>Proficiency</th>
+            </tr>
+            <tr>
+                <td>Programming</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Web Development</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Data Analysis</td>
+                <td>-</td>
+            </tr>
+        </table>
+        <table class="box" width="95%" cellpadding="15"> 
+            <td><h1><b>Languages</b></h1></td>
+            <tr>
+                <th>Language</th>
+                <th>Proficiency</th>
+            </tr>
+            <tr>
+                <td>Indonesia</td>
+                <td>Highly Proficient</td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>Very Good</td>
+            </tr>
+            <tr>
+                <td>Batak</td>
+                <td>Very Good</td>
+            </tr>
+            <tr>
+                <td>Minang</td>
+                <td>Highly Proficient</td>
+            </tr>
+        </table>    
+    </section>
 
 
-    <table >
-        <tr>
-            <td width = "5%"></td>
-            <td valign = "top" width = "50%" align="justify">
-                <h2 align = "center">Article About Four Byte Burger</h2>
-                <p>
-                    The magazine's deep dive into the Amiga <a href = "https://bytecellar.com/media/Personal_Computing_1985-Amiga.pdf">(take a look for yourself)</a> 
-                    featured various examples of graphics created on the system,the most impressive of which to my eye was entitled 
-                    <i>Four-Byte Burger</i> a whimsical and lovely, exploded digital painting 
-                    of a floppy-disk cheeseburger of sorts created by Jack Haeger, Director of Amiga's Art and Graphics Department at the time. 
-                    The 32-color image utilized the Amiga's 4096-color palette to produce graphics the likes of which I had never seen before. 
-                    (At the time, I was using an Apple II that was 6-colors only, basically.) A short time later the premier issue of AmigaWorld 
-                    magazine appeared on the shelf, also featuring the image within, and finally after the launch of the system, <i>Four-Byte Burger</i> 
-                    made its way to the inner covers of the Graphicraft paint program's user manual which is the source of the high-res scan I was 
-                    able to secure a few years back.Around the time of that earlier post, I tried to track down a digital copy of the image, but to no avail. 
-                    It wasn't in the Amiga Graphics Archive, or seemingly anywhere else I looked. I came to find out that <i>Four-Byte Burger</i> along with 
-                    several other early Amiga paintings featured in these magazines, were created with a version of Graphicraft so early in development 
-                    that it did not yet feature file I/O capabilities. These images were drawn, the CRT display was photographed, and then those lovely 
-                    pixels were cast into the void when power was taken from system RAM with the flick of a switch.
-                    These images, in digital form at least, were lost to time...like tears in rain.
-                    <br><br>
-                    Luckily, I wasn't the only one that had been carrying that image around in his head for the past 40 years or so. Stuart Brown, YouTuber 
-                    XboxAhoy who is renowned in gamer circles, recently posted to his video game documentary channel a video in which he laments the loss of 
-                    this memorable image and sets out to recreate it based on the photographs we have available. This digital restoration was an arduous process, 
-                    and it is fully documented by the benevolent restorer in his video. And, in the end, I believe he achieved his goal. The results bring an 
-                    enormous smile to my face.Once I watched this amazing video, I immediately knew that I had to get this piece of digital artistry that's so 
-                    beloved to me onto the glowing phosphor screen of my Amiga 1000. Ahoy was kind enough to provide a link to the resulting Amiga IFF image 
-                    file when asked, so I loaded it onto the Parceiro device's SD card and after waiting for the 1080 monitor to degauss post-rotation 
-                    (I encountered the same obscured color due to the Earth's magnetic field that he did in his video), I beheld an incredible sight indeed: 
-                    an Amiga 1000 displaying its very best image - and on my desk - in the Byte Cellar.
-                    Thanks, Ahoy.<br>
-                    <div align = "center">
-                        <a href="https://www.youtube.com/watch?v=i4EFkspO5p4">(Here's the full video)</a>
-                    </div>
-                </p>
-            </td>   
-            <td width = "40%" align="center">
-                <h2>Four Byte Burger</h2>
-                <hr size = "4" color="black" width="50%">
-                <img src="FourByteBurger.jpg" alt="Four Byte Burger" width="420" height="580">
-                <hr size = "4" color="black" width="50%">
-            </td>
-        </tr>
-    </table>
+    <section id="contact" class="box block">
+        <h2 class="about-heading">Contact</h2> 
+        <section class="alt">
+            <h3>Address</h3>
+            <p>
+                Jl. Veteran No.10-11, Ketawanggede, Kec. Lowokwaru, Kota Malang, Jawa Timur 65145
+            </p>
+        </section>
+        <section>
+            <h3>Phone</h3>
+            <p><a href="#">+62 826 869 105</a></p>
+        </section>
+        <section>
+            <h3>Email</h3>
+            <p><a href="#">OracleTio@gmail.com</a></p>
+        </section>
 
-
-    <br>
-
-    <table>
-        <tr>
-            <td width = "5%"></td>
-            <td width = "90%">
-                <h1>Socials</h1>
-                <table>
-                    <tr>
-                        <td>
-                            <a href="https://www.instagram.com/tiooracle/"><img src="instagram_grayscale.png" alt="tioor" width="30" height="30" ></a>
-                        </td>
-                        <td>
-                            <a href="https://steamcommunity.com/profiles/76561199043388431/"><img src="Steam_Grayscale.png" alt="zer04" width="30" height="30" ></a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <a href=" https://open.spotify.com/user/tio.%2C.%2C?si=108c4ccf496641e7"><img src="Spotify_Greyscale.png" alt="tio" width="30" height="30" ></a>
-                        </td>
-                        <td>
-                            <a href="https://github.com/OraclePanjaitan"><img src="Github_grayscale.png" alt="tio" width="30" height="30" ></a>
-                        </td>
-                    </tr>
-                   
-                </table>
-            </td>
-            <td width = "5%"></td>
-        </tr>
-    </table>
-
-
-    <!-- <hr size="3" color="gray"> -->
-    <hr size="8" color="gray">
-    
+        <section>
+            <h3>Socials</h3>
+            <table >
+                <tr>
+                    <td>
+                        <a href="https://www.instagram.com/tiooracle/"><img src="instagram_grayscale.png" alt="tioor" width="30" height="30" ></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://steamcommunity.com/profiles/76561199043388431/"><img src="Steam_Grayscale.png" alt="zer04" width="30" height="30" ></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href=" https://open.spotify.com/user/tio.%2C.%2C?si=108c4ccf496641e7"><img src="Spotify_Greyscale.png" alt="tio" width="30" height="30" ></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://github.com/OraclePanjaitan"><img src="Github_grayscale.png" alt="tio" width="30" height="30" ></a>
+                    </td>
+                </tr>
+               
+            </table>
+        </section>
+    </section>
+        
     <footer>
-        <p>&copy; 2025 Oracle Panjaitans. All rights never reserved</p>
+        <div id="copyright">
+            <ul>
+                &copy; OraclePanjaitans. All Rights Never Reserved
+            </ul>
+        </div>
     </footer>
-
 
 </body>
 
